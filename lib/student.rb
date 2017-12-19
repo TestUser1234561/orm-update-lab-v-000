@@ -3,6 +3,8 @@ require_relative "../config/environment.rb"
 class Student
   attr_accessor :id, :name, :grade
 
+  def initialize(id = nil, name, grade)
+
   def self.new_from_db(row)
     stu = new()
     stu.id = row[0]
