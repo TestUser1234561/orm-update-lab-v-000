@@ -7,7 +7,7 @@ describe "Student" do
   before(:each) do |example|
     unless example.metadata[:skip_before]
 
-      DB[:conn].execute("DROP TABLE IF EXISTS students")
+      #DB[:conn].execute("DROP TABLE IF EXISTS students")
       sql =  <<-SQL
       CREATE TABLE IF NOT EXISTS students (
         id INTEGER PRIMARY KEY,
