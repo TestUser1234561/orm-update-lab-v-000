@@ -28,6 +28,7 @@ class Student
     SQL
 
     DB[:conn].execute(sql, self.name, self.grade)
+    self.id = DB[:conn].execute("select max(id) from students")[0]
   end
 
   def self.create_table
