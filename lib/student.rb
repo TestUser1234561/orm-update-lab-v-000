@@ -44,7 +44,9 @@ class Student
   end
 
   def self.create(name, grade)
-    new(nil, name, grade)
+    obj = new(nil, name, grade)
+    obj.save
+    obj
   end
 
   def self.drop_table
