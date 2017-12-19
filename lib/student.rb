@@ -24,7 +24,7 @@ class Student
   def save
     sql = <<-SQL
       INSERT or REPLACE into students (id, name, grade)
-      VALUES (#{self.id}, ?, ?)
+      VALUES (?, ?, ?)
     SQL
 
     DB[:conn].execute(sql, self.name, self.grade)
