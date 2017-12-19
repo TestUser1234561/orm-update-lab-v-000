@@ -11,7 +11,6 @@ class Student
 
   def self.new_from_db(row)
     new(row[0], row[1], row[2])
-    p row
   end
 
   def self.all
