@@ -23,7 +23,7 @@ class Student
 
   def save
     sql = <<-SQL
-      INSERT or REPLACE into students (name, grade)
+      INSERT or REPLACE into students (id, name, grade)
       VALUES (#{self.id}, ?, ?)
     SQL
 
